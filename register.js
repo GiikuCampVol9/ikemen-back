@@ -57,6 +57,11 @@ const savaData = () => {
     const name = document.getElementById("name").value;
     const serverTimeStamp = firebase.firestore.FieldValue.serverTimestamp()
     const created_at = serverTimeStamp
+    // storageに入れる処理
+    // urlとpathと取得する(いじいじしたら取得できる)
+
+    // auth->uid取得できる
+    // db.collection("user").doc(uid).set({})
 
     // dbという変数にフォームのデータを入れる👆
     db.collection("user")
@@ -64,7 +69,11 @@ const savaData = () => {
             email: email,
             pass: pass,
             name : name,
-            created_at : created_at
+            created_at : created_at,
+            // 画像のパス(変更削除するときにいるはず)
+            profilePath: path,
+            // 表示するようのなんとか
+            profileUrl: url
         })
         .then((docRef) => {
             console.log("Document written with ID: ", docRef.id);
