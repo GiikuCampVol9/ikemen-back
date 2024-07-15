@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase JS</title>
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <label for="email">メール</label>
+            <input type="email" name="email" placeholder="メール" id="email" />
+        </div>
+        <div>
+            <label for="pass">パスワード</label>
+            <input type="password" name="pass" placeholder="パスワード" id="pass" />
+        </div>
+
+        <div>
+            <label for="name">ナマエ</label>
+            <input type="text" name="name" placeholder="ナマエ" id="name" />
+        </div>
+
+        <!-- <button class="submit-btn" onclick="register()">Sign Up</button>
+      <button class="login-btn" onclick="login()">Sign In</button> -->
+
+        <button onclick="savaData()">作成</button>
+    </div>
+</body>
+<!-- バージョン9のSDKを追加 -->
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+<script src="register.js"></script>
+
+</html>
