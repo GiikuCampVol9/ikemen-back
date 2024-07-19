@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #486d46;
+    background-image: url("/images/map.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    height: 100%;
+}
+
+/* ヘッダー一覧 */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: white;
+}
+
+.header-image{
+    background-image: url("images/中華マーク並び.png");
+    height: 30%;
+    background-position: center center;
+}
+
+.search-entry{
+    background-color: yellow;
+}
+
+/* フッター一覧 */
+.ramen-list {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    /* background-color: red; */
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 80%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
