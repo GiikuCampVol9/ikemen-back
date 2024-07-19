@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ユーザーログインテスト</title>
+</head>
+<body>
+    <form action="" onsubmit="event.preventDefault(); userLogin();">
+        <div>
+            <label for="email">メール</label>
+            <input type="email" name="email" placeholder="メールアドレス" id="email" />
+        </div>
+        
+        <div>
+            <label for="pass">パスワード</label>
+            <input type="password" name="pass" placeholder="6文字以上のパスワード" id="pass" />
+        </div>
+
+        <button type="submit">ログイン</button>
+    </form>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+
+<script src="user_create_test.js"></script>
+</html>

@@ -1,12 +1,12 @@
 // Firebaseの初期化
 const firebaseConfig = {
-    apiKey: "AIzaSyAR6puGjI0wejXqMVFtJgLHFGTAhxiQG-4",
-    authDomain: "ikemen-9c89f.firebaseapp.com",
-    projectId: "ikemen-9c89f",
-    storageBucket: "ikemen-9c89f.appspot.com",
-    messagingSenderId: "462068637932",
-    appId: "1:462068637932:web:e745925fe748a101fa05c9",
-    measurementId: "G-1G03LTN26D"
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: "",
+    measurementId: ""
 };
 
 // Firebaseアプリの初期化
@@ -51,21 +51,29 @@ const auth = firebase.auth();
 // }
 
 // データをFireStoreに保存するメソッド
-const saveData = () => {
+const savaData = () => {
     const email = document.getElementById("email").value;
     const pass = document.getElementById("pass").value;
     const name = document.getElementById("name").value;
     const serverTimeStamp = firebase.firestore.FieldValue.serverTimestamp()
     const created_at = serverTimeStamp
+    // storageに入れる処理
+    // urlとpathと取得する(いじいじしたら取得できる)
+
+    // auth->uid取得できる
+    // db.collection("user").doc(uid).set({})
 
     // dbという変数にフォームのデータを入れる👆
-    db.collection("user") 
+    db.collection("user")
         .add({
             email: email,
             pass: pass,
-            name: name,
-            prof_img: Path2D,
-            created_at: created_at
+            name : name,
+            created_at : created_at,
+            // 画像のパス(変更削除するときにいるはず)
+            prof_img: path,
+            // 表示するようのなんとか
+            profileUrl: url
         })
         .then((docRef) => {
             console.log("Document written with ID: ", docRef.id);
