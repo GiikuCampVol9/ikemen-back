@@ -57,5 +57,17 @@ async function registerData() {
         '距離': "100m"
     });
 
-    alert('データが登録されました！');
+    // alert('データが登録されました！');
+    // モーダルを表示
+    showModal();
+}
+
+function showModal() {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "block";
+}
+
+function closeModal() {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "none";
 }
