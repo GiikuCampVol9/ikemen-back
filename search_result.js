@@ -52,11 +52,11 @@ function createCard(data) {
                         <td colspan="2">現在地から<span>${data.距離}</span></td>
                     </tr>
                 </table>
+                <img src="${data.写真}" alt="${data.店名}" height="90" width="100">
             </div>
         `
     ;
 
-    // <img src="/images/ラーメンの写真.jpg" alt="${data.店名}の写真" height="90" width="100">
     card.innerHTML = cardContent;
     cardContainer.appendChild(card);
 }

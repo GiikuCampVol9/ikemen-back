@@ -26,10 +26,25 @@ body {
     background-image: url("images/中華マーク並び.png");
     height: 30%;
     background-position: center center;
+    flex: 1;
 }
 
-.search-entry{
-    background-color: yellow;
+.search-entry {
+    display: flex;
+    align-items: center;
+    /* background-color: yellow; */
+    padding: 10px;
+    flex: 3;
+    justify-content: space-between;
+}
+
+.header-tags {
+    display: flex;
+    gap: 10px;
+}
+
+.search-img {
+    height: 30px;
 }
 
 /* フッター一覧 */
